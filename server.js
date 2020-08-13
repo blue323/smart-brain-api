@@ -23,13 +23,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-<<<<<<< HEAD
-app.get('/', (req, res) => {
-    res.send(db.users)
-})
-=======
+
 app.get('/', (req, res) => { res.send('Yay!') });
->>>>>>> 7055602... update
 
 app.post('/signin', signin.handleSignIn(db, bcrypt));
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) });
